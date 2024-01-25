@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --primary-light-hsl: 200, 100%, 91%;
+  --primary-hsl: 200, 100%, 50%;
+  --primary-dark-hsl: 200, 100%, 8%;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.main {
+  background-image: url(assets/derek-mack-CcRZ4k3c6gA-unsplash.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container {
+  --color: hsl(var(--primary-dark-hsl), 0.7);
+  background-color: var(--color);
+  box-shadow: 0 0 15px 0 var(--color);
+  padding: 40px 30px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 20px;
+}
+.title {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+.form {
+    margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.input label{
+    color: white;
+font-weight: lighter;
+}
+.input input{
+    font-size: 1.25rem;
+    padding: .5rem;
+    background-color: hsl(var(--primary-light-hsl),0.3);
+    border: none;
+    outline: none;
+    border-radius: .25em;
+    color: white;
+}
+.input input:focus{
+    box-shadow: 0 0 0 1px hsl(var(--primary-hsl));
+}
+.input.success input{
+    box-shadow: 0 0 0 1px rgb(13, 143, 13);
+
+}
+.input.error input{
+    box-shadow: 0 0 0 1px rgb(215, 25, 25);
+
+}
+
+.input .msg{
+    display: none;
+    font-size: .75rem;
+}
+.input.success .msg{
+    color: rgb(13, 143, 13);
+    display: block;
+}
+.input.error .msg{
+    color: rgb(215, 25, 25);
+    display: block;
+}
+
+.login-button{
+    padding: .5em 1em;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: white;
+    background-color: hsl(var(--primary-hsl),.25);
+    border: 1px solid hsl(var(--primary-hsl));
+    border-radius: .25em;
+    outline: none;
+    cursor: pointer;
+}
+.login-button:hover, .login-button:focus{
+    background-color: hsl(var(--primary-hsl),.4);
+}
